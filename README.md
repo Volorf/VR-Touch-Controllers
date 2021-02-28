@@ -1,5 +1,5 @@
 # VR Hand Controller
-Minimalist Low Poly VR Hand Controllers for your new stylish Unity project.
+Minimalist Low Poly VR Hand Controllers for your awesome Unity project.
 
 The demo works on the top of XR Interaction Toolkit and XR Emitters (button's animaitions are binded to its events).
 
