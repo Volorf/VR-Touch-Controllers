@@ -7,13 +7,8 @@ The demo works on the top of XR Interaction Toolkit and XR Emitters (button's an
 
 # How to use it
 * Import `VRHandController.unitypackage` into your project;
-* Set up XR Interaction Toolkit and [XR Emitters](https://github.com/Volorf/XR-Emitter);
+* Set up XR Interaction Toolkit and [XR Emitter](https://github.com/Volorf/XR-Emitter);
 * Add VR Controller prefab to Hand Controllers and set up it.
-
-# Tutorial
-Moving pictures are worst a million words.
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
 
 # Notes
 * I work with Unity 2019 right now and all the scripts worked fine so far. So, have no idea how it will work with the latest or the oldest versions.
