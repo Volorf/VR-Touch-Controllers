@@ -1,12 +1,12 @@
 # VR Hand Controller
-Minimalist Low Poly XR Hand Controllers for your new stylish Unity project.
+Minimalist Low Poly VR Hand Controllers for your new stylish Unity project.
 
 The demo works on the top of XR Interaction Toolkit and XR Emitters (button's animaitions are binded to its events).
 
-<img src="media/vr_controller.gif" width="600">
+<img src="media/vr_controller_opt.gif" width="600">
 
 # How to use it
-* Import VRController.unitypackage into your project;
+* Import `VRHandController.unitypackage` into your project;
 * Set up XR Interaction Toolkit and [XR Emitters](https://github.com/Volorf/XR-Emitter);
 * Add VR Controller prefab to Hand Controllers and set up it.
 
