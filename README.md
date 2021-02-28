@@ -12,7 +12,7 @@ The demo works on the top of XR Interaction Toolkit and XR Emitters (button's an
 
 # Notes
 * I work with Unity 2019 right now and all the scripts worked fine so far. So, have no idea how it will work with the latest or the oldest versions.
-* I added a Blender source file in a case you would like to create your own mapping for whatever platform your want to use it. 
+* I added a Blender source file in a case you would like to change texture and UV. 
 
 # Plans
 * Probably, I will add an Unreal version.
