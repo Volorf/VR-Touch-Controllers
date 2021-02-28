@@ -19,7 +19,10 @@ public class VrController : MonoBehaviour
     }
 
     [SerializeField] private Hand currentHand = Hand.Right;
- 
+    
+    [SerializeField] private bool testMode = false;
+    private const float BLEND_SHAPE_MULTIPLIER = 100f;
+    
     private const int SECONDARY_BUTTON_INDEX = 0;
     [Range(0f, 100f)] [SerializeField] float secondaryButtonWeight = 0f;
 
@@ -31,10 +34,7 @@ public class VrController : MonoBehaviour
     
     private const int GRIP_BUTTON_INDEX = 3;
     [Range(0f, 100f)] [SerializeField] float gripButtonWeight = 0f;
-
-    [SerializeField] private bool testMode = false;
-    private const float BLEND_SHAPE_MULTIPLIER = 100f;
-
+    
     [SerializeField] private GameObject joystick;
     private const float X_OFFSET = 20f;
     private const float Y_OFFSET = 20f;
@@ -43,18 +43,20 @@ public class VrController : MonoBehaviour
 
     private void Awake()
     {
-        if (currentHand == Hand.Right)
+        switch (currentHand)
         {
-            _currentSkinnedMeshRenderer = skinnedMeshRendererRightController;
-            skinnedMeshRendererLeftController.gameObject.SetActive(false);
-        }
-
-        if (currentHand == Hand.Left)
-        {
-            _currentSkinnedMeshRenderer = skinnedMeshRendererLeftController;
-            joystick.transform.position += new Vector3(-transform.localScale.x, 0f, 0f);
-            skinnedMeshRendererRightController.gameObject.SetActive(false);
-            
+            case Hand.Right:
+                _currentSkinnedMeshRenderer = skinnedMeshRendererRightController;
+                skinnedMeshRendererLeftController.gameObject.SetActive(false);
+                break;
+            case Hand.Left:
+                _currentSkinnedMeshRenderer = skinnedMeshRendererLeftController;
+                joystick.transform.position += new Vector3(-transform.localScale.x, 0f, 0f);
+                skinnedMeshRendererRightController.gameObject.SetActive(false);
+                break;
+            default:
+                Debug.Log("No hands");
+                break;
         }
     }
 
