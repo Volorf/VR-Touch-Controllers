@@ -51,7 +51,7 @@ public class VrController : MonoBehaviour
                 break;
             case Hand.Left:
                 _currentSkinnedMeshRenderer = skinnedMeshRendererLeftController;
-                joystick.transform.position += new Vector3(-transform.localScale.x, 0f, 0f);
+                joystick.transform.position += new Vector3(-joystick.transform.position.x * 2.0f, 0f, 0f);
                 skinnedMeshRendererRightController.gameObject.SetActive(false);
                 break;
             default:
