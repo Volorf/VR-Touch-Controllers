@@ -89,6 +89,7 @@ public class VRController : MonoBehaviour
     public void SetTriggerButtonState(float value) => ProcessButtonState(TRIGGER_BUTTON_INDEX, value);
     public void SetGripButtonState(float value) => ProcessButtonState(GRIP_BUTTON_INDEX, value);
 
+    // Instant reactions
     public void SetTriggerButtonPressed() => ProcessButtonState(TRIGGER_BUTTON_INDEX, BLEND_SHAPE_MULTIPLIER);
     public void SetTriggerButtonReleased() => ProcessButtonState(TRIGGER_BUTTON_INDEX, 0f);
     public void SetGripButtonPressed() => ProcessButtonState(GRIP_BUTTON_INDEX, BLEND_SHAPE_MULTIPLIER);
