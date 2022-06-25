@@ -65,6 +65,7 @@ public class VRController : MonoBehaviour
         _currentSkinnedMeshRenderer.SetBlendShapeWeight(TRIGGER_BUTTON_INDEX, triggerButtonWeight);
         _currentSkinnedMeshRenderer.SetBlendShapeWeight(GRIP_BUTTON_INDEX, gripButtonWeight);
         SetJoystickState(vec2);
+        Debug.LogWarning("The VR Controller in Test Mode. All device's events will be overwritten by values in the editor.");
     }
 
     public void SetJoystickState(Vector2 vector2)
