@@ -75,27 +75,35 @@ public class VRController : MonoBehaviour
         joystick.transform.localEulerAngles = (new Vector3(xRot, 0f, zRot));
     }
     
-    public void SetSecondaryButtonState(bool value)
-    {
-        float processedValue = value ? BLEND_SHAPE_MULTIPLIER : 0f;
-        ProcessButtonState(SECONDARY_BUTTON_INDEX, processedValue);
-    }
+    // public void SetSecondaryButtonState(bool value)
+    // {
+    //     float processedValue = value ? BLEND_SHAPE_MULTIPLIER : 0f;
+    //     ProcessButtonState(SECONDARY_BUTTON_INDEX, processedValue);
+    // }
+    
 
-    public void SetPrimaryButtonState(bool value)
-    {
-        float processedValue = value ? BLEND_SHAPE_MULTIPLIER : 0f;
-        ProcessButtonState(PRIMARY_BUTTON_INDEX, processedValue);
-    }
+    // public void SetPrimaryButtonState(bool value)
+    // {
+    //     float processedValue = value ? BLEND_SHAPE_MULTIPLIER : 0f;
+    //     ProcessButtonState(PRIMARY_BUTTON_INDEX, processedValue);
+    // }
 
-    public void SetTriggerButtonState(float value) => ProcessButtonState(TRIGGER_BUTTON_INDEX, value);
-    public void SetGripButtonState(float value) => ProcessButtonState(GRIP_BUTTON_INDEX, value);
+    // public void SetTriggerButtonState(float value) => ProcessButtonState(TRIGGER_BUTTON_INDEX, value);
+    // public void SetGripButtonState(float value) => ProcessButtonState(GRIP_BUTTON_INDEX, value);
 
     // Instant reactions
     public void SetTriggerButtonPressed() => ProcessButtonState(TRIGGER_BUTTON_INDEX, BLEND_SHAPE_MULTIPLIER);
     public void SetTriggerButtonReleased() => ProcessButtonState(TRIGGER_BUTTON_INDEX, 0f);
+    
     public void SetGripButtonPressed() => ProcessButtonState(GRIP_BUTTON_INDEX, BLEND_SHAPE_MULTIPLIER);
     public void SetGripButtonReleased() => ProcessButtonState(GRIP_BUTTON_INDEX, 0f);
-
+    
+    public void SetPrimaryButtonPressed() => ProcessButtonState(PRIMARY_BUTTON_INDEX, BLEND_SHAPE_MULTIPLIER);
+    public void SetPrimaryButtonReleased() => ProcessButtonState(PRIMARY_BUTTON_INDEX, 0f);
+    
+    public void SetSecondaryButtonPressed() => ProcessButtonState(SECONDARY_BUTTON_INDEX, BLEND_SHAPE_MULTIPLIER);
+    public void SetSecondaryButtonReleased() => ProcessButtonState(SECONDARY_BUTTON_INDEX, 0f);
+    
     private void ProcessButtonState(int index, float value)
     {
         float clampedValue = Mathf.Clamp(value * BLEND_SHAPE_MULTIPLIER, 0f, BLEND_SHAPE_MULTIPLIER);
